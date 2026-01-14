@@ -51,9 +51,9 @@ if __name__ == '__main__':
     else:
         logger.info("Skipping historic data (not configured)")
 
-    year_active_stations = [station for station in stations if station.date_to.year == today.year]
+    year_active_stations = [station for station in stations if station.date_to.year >= today.year - 1]
 
-    logger.info(str(len(year_active_stations)) + " active stations this year")
+    logger.info(str(len(year_active_stations)) + " active stations this or last year")
     logger.info("Importing this years data of " + str(len(year_active_stations)) + " stations...")
     stationImport.import_recent(year_active_stations)
 
