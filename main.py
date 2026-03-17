@@ -23,7 +23,7 @@ from lib.station.Station import get_stations_in_bboxes
 from lib.station.StationImport import StationImport
 
 if __name__ == '__main__':
-    lib = ImportLib()
+    lib = ImportLib("github.com/SENERGY-Platform/import-dwd-stations-monthly")
     logger = get_logger(__name__)
     stationImport = StationImport(lib)
 
